@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.bannerBox .heading {	
+    max-width: 820px;
+    margin: 0;
+    z-index: 9;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    bottom: 15vh;
+    opacity: .4 !important;
+}
+.bannerBox .heading h1 {
+    text-transform: uppercase;font-family: 'Archivo Black','Arial Black',arial;font-size:120px;line-height:100px;
+/*	font-size:180px;line-height:140px;*/
+}
+.bannerBox .heading h1 a:after,.bannerBox .heading h1 a > span:after { width:0 !important;}
+.bannerBox .heading:hover { opacity:.7 !important;}
+
+
+@media only screen and (max-width: 767px) {
+	.bannerBox .heading {bottom:10vh;}
+	.bannerBox .heading h1 { font-size:50px;line-height:45px;}
+}
