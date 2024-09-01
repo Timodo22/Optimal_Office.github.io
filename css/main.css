@@ -152,12 +152,11 @@ p a:after { content: ''; display: block; position: absolute; left: 0; bottom: 1p
 
 	/* ### banner box ### */
 	.bannerBox { min-height: 565px; height: 100vh; padding-top: 66px; z-index: 9; overflow: hidden; position: relative; text-align: center; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background-size: cover; background-position: center; background-repeat: no-repeat; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
-	.bannerBox:after { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; background: #20252e; opacity:0;}
 	.bannerBox.inner { padding-top: 0; }
 	.bannerBox.inner:after { background: #1a1a1a; opacity:0;}
 	.bannerBox.inner:after, .bannerBox:after { animation: fadeInHalf 1s ease 1s forwards; -webkit-animation: fadeInHalf 1s ease 1s forwards; -moz-animation: fadeInHalf 1s ease 1s forwards; -o-animation: fadeInHalf 1s ease 1s forwards; -ms-animation: fadeInHalf 1s ease 1s forwards;}
 	
-	.bannerBox .video { z-index: -1; min-width: 120%; min-height: 120%; position: absolute; left: -10%; top: -10%; }
+	.bannerBox .video { z-index: -1; min-width: 120%; min-height: 100%; position: absolute; left: -10%; top: -10%; }
 	.bannerBox .video.phone { display: none; }
 
 		
@@ -783,7 +782,7 @@ p a:after { content: ''; display: block; position: absolute; left: 0; bottom: 1p
 
 /* ### Homepage video: ipad landscape show desktop video ### */
 @media (orientation: landscape) {
-	.bannerBox .video.desktop { display: block; }
+	.bannerBox .video.desktop { display: block; max-height: 518px; }
 	.bannerBox .video.phone { display: none; }
 }
 /* ### Homepage video: ipad portrait show desktop video ### */
