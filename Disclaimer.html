@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="Optimal Office | Create your ideal workspace">
+	<meta name="description" content="Optimal Office, spraakmakende omgevingen, met lef ontwikkeld.">
 	<meta name="keywords" content="Optimal Office,groep,interieur,interieurbouw,exploitatie,ontwerp,realisatie,creatief interieur bureau,vastgoed,ontwikkeling,design,verhuur,workspace,lef,interieurdesign,interieurontwerp,interieurarchitect">
 	<meta name="robots" content="index, follow">
 	<link rel="icon" type="image/png" href="images/mainlogo.png">
@@ -115,7 +115,7 @@
 							<ul>
 																																																																																																										<li><a href="/Privacy.html">Privacy</a></li>
 																																																																																																										<li><a href="/Algemene_voorwaarden.html">Algemene voorwaarden</a></li>
-																																																																																																										<li><a href="/Disclaimer.html">Disclaimer</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <li><a href="/Disclaimer.html">Disclaimer</a></li>
 																												
 																													
 																																																															</ul>
@@ -143,15 +143,9 @@
 					****************************************************-->
 					<!--  / team box \ -->
 					<div class="teamBox centered">
-						<div class="heading" style="margin-top: 80px;">
-							<h1 class="animate-heading" data-splitting="">Contact form</h1>
-
-							<div class="sub-title">Please enter your details along with your specific question here. We will call you back as soon as possible.</div>
-						</div>
 					</div>
 					<!--  \ team box / -->
                     <style>
-                
                         .container-wrapper {
                             display: flex;
                             align-items: center;
@@ -165,7 +159,7 @@
                             padding: 20px;
                             border-radius: 8px;
                             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                            max-width: 400px;
+                            max-width: 800px;
                             width: 100%;
                         }
                 
@@ -175,154 +169,44 @@
                             margin-bottom: 20px;
                         }
                 
-                        input, textarea {
-                            width: 100%;
-                            padding: 10px;
-                            margin: 10px 0;
-                            border-radius: 4px;
-                            border: 1px solid #ccc;
+                        h2 {
+                            color: #033270;
+                            margin-bottom: 10px;
                         }
                 
-                        button {
-                            background-color: #033270;
-                            color: white;
-                            padding: 10px;
-                            border: none;
-                            border-radius: 4px;
-                            cursor: pointer;
-                            width: 100%;
-                            font-size: 16px;
+                        p {
+                            margin-bottom: 10px;
+                            line-height: 1.6;
                         }
                 
-                        button:hover {
-                            background-color: #021f4a;
+                        ul {
+                            margin-bottom: 20px;
+                            padding-left: 20px;
                         }
                 
-                        .popup {
-                            display: none;
-                            background-color: rgba(0, 0, 0, 0.7);
-                            color: white;
-                            padding: 20px;
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            border-radius: 8px;
-                            z-index: 1000;
-                            text-align: center;
+                        ul li {
+                            margin-bottom: 10px;
                         }
                 
-                        .popup h2 {
-                            margin: 0;
-                            padding: 0;
+                        a {
+                            color: #033270;
+                            text-decoration: none;
                         }
                 
-                        .overlay {
-                            display: none;
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(0, 0, 0, 0.5);
-                            z-index: 999;
+                        a:hover {
+                            text-decoration: underline;
                         }
                     </style>
                 </head>
                 <body>
-					<div class="container-wrapper">
-						<div class="container">
-							<h1>Contact Us</h1>
-							<form id="contactForm">
-								<input type="text" id="name" name="name" placeholder="Your Name" required>
-								<input type="email" id="email" name="email" placeholder="Your Email" required>
-								<input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-								<textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-								<button type="submit">Send Message</button>
-							</form>
-						</div>
-					</div>
-					
                 
-                    <!-- Popup -->
-                    <div class="overlay" id="overlay"></div>
-                    <div class="popup" id="popup">
-                        <h2>Optimal office says:</h2>
-                        <p>Thank you for reaching out. We will get back to you soon.</p>
+                <div class="container-wrapper" style="margin-top: 80px;">
+                    <div class="container">
+                        <h1>Disclaimer</h1>
+                        <p>Sommige fotos zijn ter illustratie, sommige foto's zijn gemaakt door Optimal Office en mogen niet worden gebruikt. Het webdesign is gemaakt door TbonkersMedia en dient ook niet te worden nagemaakt. Hier zitten juridische gevolgen aan vast</p>
                     </div>
-                
-                    <!-- JavaScript -->
-                    <script>
-const form = document.getElementById('contactForm');
-const popup = document.getElementById('popup');
-const overlay = document.getElementById('overlay');
-let lastSubmission = localStorage.getItem('lastSubmission');
+                </div>
 
-function showPopup(message) {
-    popup.querySelector('p').textContent = message;
-    overlay.style.display = 'block';
-    popup.style.display = 'block';
-}
-
-function hidePopup() {
-    overlay.style.display = 'none';
-    popup.style.display = 'none';
-}
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const now = new Date().getTime();
-    const tenMinutes = 10 * 60 * 1000;
-
-    if (lastSubmission && (now - lastSubmission) < tenMinutes) {
-        const timeLeft = Math.ceil((tenMinutes - (now - lastSubmission)) / 1000 / 60);
-        showPopup(`Please wait ${timeLeft} minute(s) before submitting again.`);
-        setTimeout(hidePopup, 5000); // Hide the popup after 5 seconds
-        return;
-    }
-
-    const webhookURL = 'https://discord.com/api/webhooks/1276542601146667053/NHQf88tQT0DWRp1yhdurQssgOP677hGX_YKmRYwHCnXt5zM5vm34djm30-I7am87S1aE';
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value; // Nieuwe regel voor het telefoonnummer
-    const message = document.getElementById('message').value;
-
-    const payload = {
-        content: `New contact form submission:\n\n**Name:** ${name}\n**Email:** ${email}\n**Phone:** ${phone}\n**Message:**\n${message}` // Telefoonnummer toegevoegd aan de payload
-    };
-
-    fetch(webhookURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-    }).then(response => {
-        if (response.ok) {
-            localStorage.setItem('lastSubmission', now);
-            form.reset();
-            showPopup('Message Sent! Thank you for reaching out. We will get back to you soon.');
-            setTimeout(hidePopup, 5000); // Hide the popup after 5 seconds
-        } else {
-            alert('There was a problem submitting the form. Please try again.');
-        }
-    }).catch(error => {
-        console.error('Error:', error);
-        alert('There was a problem submitting the form. Please try again.');
-    });
-});
-
-
-                    </script>
-
-
-
-
-								
-
-					<!--  / content blocks \ -->
-					<span id="section">
 												
 			<!-- *******************************************************************
 			BLOCK IMAGE LEFT 
