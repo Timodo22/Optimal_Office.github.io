@@ -185,7 +185,7 @@ p a:after { content: ''; display: block; position: absolute; left: 0; bottom: 1p
 	.mute span.material-icons.muted:before { font-family: 'Material Icons'; content: '\e04e';}
 
 	/* ### item box ### */
-	.itemBox { padding-top: 200px; padding-bottom: 192px; transition: background-color .6s cubic-bezier(.4,0,.2,1);background: #033270 }
+	.itemBox { padding-top: 150px; padding-bottom: 192px; transition: background-color .6s cubic-bezier(.4,0,.2,1);background: #033270 }
 	.itemBox:has(.intro) { padding-top:150px;}
 	.itemBox .row { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; margin: 0 -50px; overflow: hidden; }
 	.itemBox .col { width: 33.333%; padding: 0 50px; }
