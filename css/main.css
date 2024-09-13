@@ -987,3 +987,7 @@ body {
     background-positon-x: 0px;
   }
 }
+
+img {
+    pointer-events: none;
+}
